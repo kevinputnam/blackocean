@@ -1,0 +1,24 @@
+.contentcard {
+  background: #E4E8EA;
+  width: 800px;
+  padding: 10px;
+}
+
+.contentcard a{
+  color:  black;
+}
+
+.summary {
+  font-size: small;
+  margin-left: 85px;
+}
+
+.thumbnail {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.contentcard .title {
+  margin-left:  85px;
+  font-weight: bold;
+}

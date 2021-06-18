@@ -1,0 +1,20 @@
+.container {
+    width:1200px;
+    margin:10px;
+    display:table;
+}
+.container .header{
+    display:table-row;
+}
+.container .toc {
+    display:table-cell;
+    width:200px;
+    padding:10px;
+}
+.container .document {
+    display:table-cell;
+    width:800px;
+    max-width: 800px;
+    padding:10px;
+    vertical-align: top;
+}
