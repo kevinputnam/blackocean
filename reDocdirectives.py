@@ -85,7 +85,7 @@ class ContentCard(rst.Directive):
         for item in docTitle:
             cardLink.append(item)
         cardTitle.append(cardLink)
-        #docImage['width'] = '50px'
+        # Image attributes are reset by css
         docImage.delattr('width')
         docImage.delattr('height')
         docImage['align'] = 'left'

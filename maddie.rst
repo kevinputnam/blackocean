@@ -1,7 +1,7 @@
 Maddie Cakes
 ##############
 
-.. image:: _files/maddie.png
+.. image:: /_files/maddie.png
    :alt: A flapper brandishing twin pistols.
    :height: 300px
    :align: right
@@ -34,7 +34,7 @@ Attributes
      -
      -
    * - **Strength**
-     - 48/24/9
+     - (48%) 24/9
      - **Dexterity**
      - 49/24/9
    * - **Intelligence**

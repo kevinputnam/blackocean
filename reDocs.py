@@ -19,42 +19,32 @@ headerFile = "header.rst"
 contentsFile = "contents.rst"
 baseURL="https://github.com/kata-containers/documentation"
 gitHubMasterPath = "/tree/master"
+ignoreFiles = [headerFile,contentsFile]
 
-class HTMLFragmentTranslator( HTMLTranslator ):
+contentExtraHead = '''
+<link rel="stylesheet" href="/css/plain.css" type="text/css" />
+<link rel="stylesheet" href="/css/minimal.css" type="text/css" />
+<link rel="stylesheet" href="/css/layout.css" type="text/css" />
+<link rel="stylesheet" href="/css/custom.css" type="text/css" />
+'''
 
-    def __init__( self, document ):
-        HTMLTranslator.__init__( self, document )
-        self.head_prefix = ['','','','','']
-        headerFrame = "<div class=\"header\" id=\"header\">\n<iframe src=\"header.html\" frameborder=\"0\" width=\"100%\" height=\"100px\">\n</iframe>\n</div>\n"
-        contentsFrame = "<div class=\"toc\" id=\"table-of-contents\">\n<iframe src=\"contents.html\" frameborder=\"0\" height=\"800px\">\n</iframe>\n</div>\n"
-        cssLinks = "<link rel=\"stylesheet\" href=\"css/plain.css\" type=\"text/css\" />\n<link rel=\"stylesheet\" href=\"css/minimal.css\" type=\"text/css\" />\n<link rel=\"stylesheet\" href=\"css/layout.css\" type=\"text/css\" />\n<link rel=\"stylesheet\" href=\"css/custom.css\" type=\"text/css\" />\n"
-        self.body_prefix = [cssLinks + '</head>\n</body>\n<div class="container">\n' + headerFrame + '<div class="row">\n' + contentsFrame]
-        self.body_suffix = ['</div>\n</div>\n</body>\n</html>\n']
-        self.stylesheet = []
+contentFrames = '''<div class="container">
+<div class="header" id="header">
+<iframe src="/header.html" frameborder="0" width="100%" height="100px">
+</iframe>
+</div>
+<div class="row">
+<div class="toc" id="table-of-contents">
+<iframe src="/contents.html" frameborder="0" height="800px">
+</iframe>
+</div>
+'''
 
-class HeaderFragmentTranslator(HTMLTranslator):
-
-    def __init__( self, document ):
-        HTMLTranslator.__init__( self, document )
-        self.head_prefix = ['','','','','']
-        baseTarget = "<base target=\"_parent\">\n"
-        cssLinks = "<link rel=\"stylesheet\" href=\"css/contents.css\" type=\"text/css\" />\n"
-        self.body_prefix.insert(0,cssLinks)
-        self.body_prefix.insert(0,baseTarget)
-        self.stylesheet = []
-
+indexExtraHead = '''<base target="_parent">
+<link rel="stylesheet" href="css/contents.css" type="text/css" />
+'''
 
 class ContentsFragmentTranslator(HTMLTranslator):
-
-    def __init__( self, document ):
-        HTMLTranslator.__init__( self, document )
-        self.head_prefix = ['','','','','']
-        baseTarget = "<base target=\"_parent\">\n"
-        cssLinks = "<link rel=\"stylesheet\" href=\"css/contents.css\" type=\"text/css\" />\n"
-        self.body_prefix.insert(0,cssLinks)
-        self.body_prefix.insert(0,baseTarget)
-        self.stylesheet = []
-
 
     def visit_details(self, node):
         self.body.append(self.starttag(node, 'details', '\n'))
@@ -77,6 +67,9 @@ class reDocs:
         self.html_fragment_writer = Writer()
         self.sections = []
         self.currentDepth = 0
+        self.headerHTML = ''
+        self.contentsHTML = ''
+
 
     def getSections(self,tree,depth):
         for element in tree:
@@ -100,21 +93,39 @@ class reDocs:
         return tree
 
     def rest2html(self,s,contents=False,header=False):
+        docExtraHead = ''
+        docPreBody = ''
         if contents:
             self.html_fragment_writer.translator_class = ContentsFragmentTranslator
+            docExtraHead = indexExtraHead
+            docFooter = '</div>\n</body>\n</html>'
         elif header:
-            self.html_fragment_writer.translator_class = HeaderFragmentTranslator
+            self.html_fragment_writer.translator_class = HTMLTranslator
+            docExtraHead = indexExtraHead
+            docFooter = '</div>\n</body>\n</html>'
         else:
-            self.html_fragment_writer.translator_class = HTMLFragmentTranslator
+            self.html_fragment_writer.translator_class = HTMLTranslator
+            docExtraHead = contentExtraHead
+            docPreBody = contentFrames
+            docFooter = '</div>\n</div>\n</div>\n</body>\n</html>'
         self.sections = []
         tree = publish_doctree(s)
-        #print(tree)
         self.getSections(tree,1)
-        #self.setURLs(tree)
         htmlparts = core.publish_parts(s,writer=self.html_fragment_writer)
+
+        docHeadPrefix = htmlparts['head_prefix']
+        docHead = htmlparts['head']
+        docBodyPrefix = htmlparts['body_prefix']
+        docBodyPreInfo = htmlparts['body_pre_docinfo']
+        docBody = htmlparts["body"]
         docTitle = htmlparts["title"]
         docTitle = docTitle.strip()
-        return docTitle, self.sections, publish_from_doctree(tree, writer = self.html_fragment_writer)
+        docBodyPrefix = docBodyPrefix.replace("</head>","")
+        docBodyPrefix = docBodyPrefix.replace("<body>","")
+
+        theDoc = docHeadPrefix + docHead + docExtraHead + "</head>\n<body>\n" + docPreBody + docBodyPrefix + docBodyPreInfo + docBody + docFooter
+
+        return docTitle, self.sections, theDoc
 
     def convertDoc(self, doc, restText="",contents=False, header=False):
         htmlTitle = ""
@@ -126,7 +137,7 @@ class reDocs:
             htmlTitle, docSections, htmlText = self.rest2html(restText,contents,header)
         htmlFileName = doc.replace(".rst",".html")
         htmlFilePath = join(self.targetPath,htmlFileName)
-        with open(htmlFilePath,"wb") as htmlFile:
+        with open(htmlFilePath,"w") as htmlFile:
             htmlFile.write(htmlText)
 
         return htmlTitle, docSections, htmlFileName
@@ -148,11 +159,6 @@ class reDocs:
             cssFilePath = join(cssDir,cssFile)
             if isfile(cssFilePath):
                 copyfile(cssFilePath,join(targetCSSPath,cssFile))
-        #for htmlFile in listdir(htmlDir):
-        #    htmlFilePath = join(htmlDir,htmlFile)
-        #    if isfile(htmlFilePath):
-        #        copyfile(htmlFilePath,join(self.targetPath,htmlFile))
-
 
     def determineIndent(self,depth):
         indent = ""
@@ -174,11 +180,9 @@ class reDocs:
                 sectionAnchor = section[2]
                 indent = self.determineIndent(depth)
                 indexString += indent + "-  `" + sectionTitle + " <" + fileName + "#" + sectionAnchor +">`__\n"
-        self.convertDoc(contentsFile,indexString,contents=True)
         contentsFilePath = join(self.sourcePath,contentsFile)
         with open(contentsFilePath, "w", encoding="utf-8") as outFile:
             outFile.write(indexString)
-
 
     def buildDocs(self):
         print("building into " + str(self.targetPath) + ".")
@@ -188,16 +192,14 @@ class reDocs:
         if isfile(settingsPath):
             print("using existing settings file: " + str(settingsPath))
         noTitleCounter = 0
+        if not isdir(self.targetPath):
+            makedirs(self.targetPath)
+        self.convertDoc(headerFile,header=True)
+        self.convertDoc(contentsFile,contents=True)
         for item in listdir(self.sourcePath):
             itemPath = join(self.sourcePath,item)
             if isfile(itemPath) and item.endswith(".rst"):
-                if not isdir(self.targetPath):
-                    makedirs(self.targetPath)
-                if item == contentsFile:
-                    htmlTitle, docSections, htmlFileName = self.convertDoc(item,contents=True)
-                elif item == headerFile:
-                    htmlTitle, docSections, htmlFileName = self.convertDoc(item, header=True)
-                else:
+                if item not in ignoreFiles:
                     htmlTitle, docSections, htmlFileName = self.convertDoc(item)
                 fileList.append(item)
                 if htmlTitle == "" or htmlTitle in newFileDict:
@@ -208,5 +210,6 @@ class reDocs:
             self.addSupportFiles()
             contentsFilePath = join(self.sourcePath,contentsFile)
             if not isfile(contentsFilePath):
+                print("No contents file detected. One is being generated. Build again to add to project.")
                 self.createIndex(newFileDict)
 
