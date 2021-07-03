@@ -1,7 +1,7 @@
 Farmer Anna
 ##############
 
-.. image:: /_files/anna.jpg
+.. image:: _files/anna.jpg
    :alt: Anna driving a tractor.
    :height: 300px
    :align: right

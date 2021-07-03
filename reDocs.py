@@ -30,12 +30,12 @@ contentExtraHead = '''
 
 contentFrames = '''<div class="container">
 <div class="header" id="header">
-<iframe src="/header.html" frameborder="0" width="100%" height="100px">
+<iframe src="header.html" frameborder="0" width="100%" height="100px">
 </iframe>
 </div>
 <div class="row">
 <div class="toc" id="table-of-contents">
-<iframe src="/contents.html" frameborder="0" height="800px">
+<iframe src="contents.html" frameborder="0" height="800px">
 </iframe>
 </div>
 '''

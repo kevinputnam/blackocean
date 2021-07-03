@@ -1,7 +1,7 @@
 Maddie Cakes
 ##############
 
-.. image:: /_files/maddie.png
+.. image:: _files/maddie.png
    :alt: A flapper brandishing twin pistols.
    :height: 300px
    :align: right
