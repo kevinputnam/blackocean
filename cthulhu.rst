@@ -18,4 +18,6 @@ Investigations
 
 .. contentcard:: corbitt.rst
 
+.. contentcard:: paper_chase.rst
+
 .. contentcard:: vendetta.rst

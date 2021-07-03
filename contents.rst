@@ -10,6 +10,7 @@
   - `Investigations <cthulhu.html#investigations>`__
 
     - `The Corbitt House <corbitt.html>`__
+    - `The Paper Chase <paper_chase.html>`__
     - `Vendetta <vendetta.html>`__
 
 - `DCC and MCC <dcc_mcc_sc.html>`__
