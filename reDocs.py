@@ -200,9 +200,10 @@ class reDocs:
         for item in listdir(self.sourcePath):
             itemPath = join(self.sourcePath,item)
             if isfile(itemPath) and item.endswith(".rst"):
-                htmlTitle = ""
                 if item not in ignoreFiles:
                     htmlTitle, docSections, htmlFileName = self.convertDoc(item)
+                else:
+                    next
                 fileList.append(item)
                 if htmlTitle == "" or htmlTitle in newFileDict:
                     htmlTitle = htmlTitle + " " + str(noTitleCounter)
