@@ -22,10 +22,10 @@ gitHubMasterPath = "/tree/master"
 ignoreFiles = [headerFile,contentsFile]
 
 contentExtraHead = '''
-<link rel="stylesheet" href="/css/plain.css" type="text/css" />
-<link rel="stylesheet" href="/css/minimal.css" type="text/css" />
-<link rel="stylesheet" href="/css/layout.css" type="text/css" />
-<link rel="stylesheet" href="/css/custom.css" type="text/css" />
+<link rel="stylesheet" href="css/plain.css" type="text/css" />
+<link rel="stylesheet" href="css/minimal.css" type="text/css" />
+<link rel="stylesheet" href="css/layout.css" type="text/css" />
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 '''
 
 contentFrames = '''<div class="container">
