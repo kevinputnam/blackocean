@@ -1,4 +1,4 @@
 Vendetta
 ##########
 
-Scheduled to begin on July 7, 2021.
+Scheduled to begin on July 3, 2021.

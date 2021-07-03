@@ -203,7 +203,7 @@ class reDocs:
                 if item not in ignoreFiles:
                     htmlTitle, docSections, htmlFileName = self.convertDoc(item)
                 else:
-                    next
+                    continue
                 fileList.append(item)
                 if htmlTitle == "" or htmlTitle in newFileDict:
                     htmlTitle = htmlTitle + " " + str(noTitleCounter)
