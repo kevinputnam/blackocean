@@ -9,8 +9,8 @@ from reDocdirectives import ContentCard
 directives.register_directive("details", Details)
 directives.register_directive("contentcard",ContentCard)
 
-from os import listdir, getcwd, chdir, makedirs
-from os.path import isdir, isfile, join, expanduser
+from os import listdir, getcwd, chdir, makedirs, walk
+from os.path import isdir, isfile, join, expanduser, relpath
 from shutil import copyfile
 
 contentDir = "_files"
@@ -21,12 +21,16 @@ baseURL="https://github.com/kata-containers/documentation"
 gitHubMasterPath = "/tree/master"
 ignoreFiles = [headerFile,contentsFile]
 
+contentCSSList = ["css/plain.css","css/minimal.css","css/layout.css","css/custom.css"]
+
 contentExtraHead = '''
 <link rel="stylesheet" href="css/plain.css" type="text/css" />
 <link rel="stylesheet" href="css/minimal.css" type="text/css" />
 <link rel="stylesheet" href="css/layout.css" type="text/css" />
 <link rel="stylesheet" href="css/custom.css" type="text/css" />
 '''
+
+contentFrameFiles = ["header.html","contents.html"]
 
 contentFrames = '''<div class="container">
 <div class="header" id="header">
@@ -92,7 +96,7 @@ class reDocs:
                     print(uri)
         return tree
 
-    def rest2html(self,s,contents=False,header=False):
+    def rest2html(self,s,contents=False,header=False,path2root=''):
         docExtraHead = ''
         docPreBody = ''
         if contents:
@@ -105,8 +109,15 @@ class reDocs:
             docFooter = '</div>\n</body>\n</html>'
         else:
             self.html_fragment_writer.translator_class = HTMLTranslator
-            docExtraHead = contentExtraHead
+            docExtraHead = ''
+            for CSSFile in contentCSSList:
+                CSSFilePath = join(path2root,CSSFile)
+                CSSHTML = '<link rel="stylesheet" href="'+ CSSFilePath+ '" type="text/css" />\n'
+                docExtraHead += CSSHTML
             docPreBody = contentFrames
+            for frameFile in contentFrameFiles:
+                frameFilePath = join(path2root,frameFile)
+                docPreBody = docPreBody.replace(frameFile,frameFilePath)
             docFooter = '</div>\n</div>\n</div>\n</body>\n</html>'
         self.sections = []
         tree = publish_doctree(s)
@@ -127,6 +138,28 @@ class reDocs:
         theDoc = docHeadPrefix + docHead + docExtraHead + "</head>\n<body>\n" + docPreBody + docBodyPrefix + docBodyPreInfo + docBody + docFooter
 
         return docTitle, self.sections, theDoc
+
+    def convertDoc2(self, path, doc):
+        htmlTitle = ""
+        itemPath = join(path,doc)
+        extraPath = ''
+        path2root = ''
+        if path != self.sourcePath:
+            extraPath = relpath(path,self.sourcePath)
+            path2root = relpath(self.sourcePath,path)
+        with open(itemPath, encoding="utf-8") as restFile:
+            restText = restFile.read()
+        if restText != None:
+            htmlTitle, docSections, htmlText = self.rest2html(restText,False,False,path2root)
+        htmlFileName = doc.replace(".rst",".html")
+        finalPath = join(self.targetPath,extraPath)
+        if not isdir(finalPath):
+            makedirs(finalPath)
+        htmlFilePath = join(finalPath,htmlFileName)
+        with open(htmlFilePath,"w") as htmlFile:
+            htmlFile.write(htmlText)
+
+        return htmlTitle, docSections, htmlFileName
 
     def convertDoc(self, doc, restText="",contents=False, header=False):
         htmlTitle = ""
@@ -197,18 +230,19 @@ class reDocs:
             makedirs(self.targetPath)
         self.convertDoc(headerFile,header=True)
         self.convertDoc(contentsFile,contents=True)
-        for item in listdir(self.sourcePath):
-            itemPath = join(self.sourcePath,item)
-            if isfile(itemPath) and item.endswith(".rst"):
-                if item not in ignoreFiles:
-                    htmlTitle, docSections, htmlFileName = self.convertDoc(item)
-                else:
-                    continue
-                fileList.append(item)
-                if htmlTitle == "" or htmlTitle in newFileDict:
-                    htmlTitle = htmlTitle + " " + str(noTitleCounter)
-                    noTitleCounter += 1
-                newFileDict[htmlTitle]=[htmlFileName,docSections]
+        for path, subdirs, files in walk(self.sourcePath):
+            for name in files:
+                if name.endswith(".rst"):
+                    if name not in ignoreFiles:
+                        print("converting " + join(path, name))
+                        htmlTitle, docSections, htmlFileName = self.convertDoc2(path, name)
+                    else:
+                        continue
+                    fileList.append(name)
+                    if htmlTitle == "" or htmlTitle in newFileDict:
+                        htmlTitle = htmlTitle + " " + str(noTitleCounter)
+                        noTitleCounter += 1
+                    newFileDict[htmlTitle]=[htmlFileName,docSections]
         if len(newFileDict) != 0:
             self.addSupportFiles()
             contentsFilePath = join(self.sourcePath,contentsFile)
