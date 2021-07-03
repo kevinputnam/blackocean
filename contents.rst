@@ -15,3 +15,4 @@
 - `Wanderhome <wanderhome.html>`__
 - `Frontier Space <frontier.html>`__
 - `Star Trek Adventures <startrek.html>`__
+- `The Expanse <expanse.html>`__

@@ -120,6 +120,7 @@ class reDocs:
         docBody = htmlparts["body"]
         docTitle = htmlparts["title"]
         docTitle = docTitle.strip()
+        #remove head and body but keep the section - need to add it lower down.
         docBodyPrefix = docBodyPrefix.replace("</head>","")
         docBodyPrefix = docBodyPrefix.replace("<body>","")
 
