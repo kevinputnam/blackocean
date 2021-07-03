@@ -3,6 +3,7 @@ from docutils.parsers.rst import directives
 from docutils.parsers.rst import Directive
 from docutils.parsers import rst
 from docutils.nodes import paragraph, container, Inline
+from os.path import join, dirname
 
 class details(Inline,container):
 
@@ -67,6 +68,10 @@ class ContentCard(rst.Directive):
             docTitle.append(docTitleText)
         try:
             docImage = next(iter(document.traverse(nodes.image)))
+            imgPath = docImage['uri']
+            docRelPath = dirname(path)
+            imgRelPath = join(docRelPath,imgPath)
+            docImage['uri'] = imgRelPath
         except:
             docImage = nodes.image()
             docImage['uri']="null"

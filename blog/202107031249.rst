@@ -1,4 +1,6 @@
-It happened on the way to the forum
-####################################
+A Funny Thing Happened on the Way to the Forum
+################################################
+
+.. image:: ../_files/forum.jpg
 
 This is just a test.

@@ -12,3 +12,5 @@ Welcome
 .. contentcard:: startrek.rst
 
 .. contentcard:: expanse.rst
+
+.. contentcard:: blog/202107031249.rst
