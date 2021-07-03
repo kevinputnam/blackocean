@@ -2,7 +2,7 @@ Maddie Cakes
 ##############
 
 .. image:: _files/maddie.png
-   :alt: A flapper brandishing twin pistols.
+   :alt: Maddie wielding a flashlight.
    :height: 300px
    :align: right
 
