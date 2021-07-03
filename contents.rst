@@ -12,6 +12,7 @@
     - `The Corbitt House <corbitt.html>`__
     - `Vendetta <vendetta.html>`__
 
+- `DCC and MCC <dcc_mcc_sc.html>`__
 - `Wanderhome <wanderhome.html>`__
 - `Frontier Space <frontier.html>`__
 - `Star Trek Adventures <startrek.html>`__

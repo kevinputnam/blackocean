@@ -1,5 +1,5 @@
-DCC and MCC
-###################
+Dungeon Crawl Classics and Mutant Crawl Classics
+#################################################
 
 *Dungeon Crawl Classics* and *Mutant Crawl Classics* are new interpretations of venerable classics published by Goodman Games. Good humor and fun are a big part of what they offer.
 
