@@ -24,6 +24,7 @@ They are greeted by a reticent and grumpy Ms. Mapes who shows them directly to t
 .. image:: _files/library.png
    :height: 200px
    :alt: Mr. Castilla’s private library is a thing of real beauty.
+   :align: center
 
 After peppering the uncooperative Ms. Mapes with questions to which she responded with unsatisfactory answers, Mr. Castilla arrived in the library and welcomed the investigators. In his excitement to have them there, he neglected his manners and failed to offer them refreshments.
 
