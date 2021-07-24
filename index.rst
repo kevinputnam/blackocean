@@ -5,6 +5,8 @@ Welcome
 
 .. contentcard:: dcc_mcc_sc.rst
 
+.. contentcard:: 2300.rst
+
 .. contentcard:: wanderhome.rst
 
 .. contentcard:: frontier.rst
