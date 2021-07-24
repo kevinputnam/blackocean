@@ -7,7 +7,7 @@ Dungeon Crawl Classics and Mutant Crawl Classics
    :height: 300px
    :target: https://goodman-games.com/store/dungeon-crawl-classics/
 
-*Dungeon Crawl Classics* and *Mutant Crawl Classics* are new interpretations of venerable classics published by Goodman Games. Good humor and fun are a big part of what they offer.
+*Dungeon Crawl Classics* and *Mutant Crawl Classics* are new interpretations of classics published by Goodman Games. Good humor and fun are a big part of what they offer.
 
 Dungeon Crawl Classics
 =========================
