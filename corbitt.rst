@@ -5,5 +5,6 @@ The Haunting of the Corbitt House
    :alt: A cartoon depiction of the Corbitt house by Jason Thompson - SPOILERS!
    :align: center
    :height: 300px
+   :target: https://mockman.myshopify.com
 
 Started on March 27, 2021 and Completed on June 5, 2021.
