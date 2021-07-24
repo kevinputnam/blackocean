@@ -5,6 +5,7 @@
    :alt: 2300 AD revised cover image - space explorers atop a ridge facing an alien sunset.
    :align: right
    :height: 300px
+   :target: https://www.mongoosepublishing.com/us/rpgs/2300ad.html
 
 Based on one of the most venerable Sci-Fi RPGs around (Traveller - 1977), this revival eschews a far future setting for a closer and more familiar future with all the problems and possibilities that entails.
 

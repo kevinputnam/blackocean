@@ -7,6 +7,7 @@ Call of Cthulhu
    :alt: Call of Cthulhu cover image - a great old one emerges from the sea, looming menacingly over a foundering fishing boat.
    :align: center
    :height: 300px
+   :target: https://www.chaosium.com/call-of-cthulhu-rpg/
 
 Resources for our Call of Cthulhu game.
 
