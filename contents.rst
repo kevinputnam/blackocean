@@ -13,6 +13,7 @@
     - `The Paper Chase <paper_chase.html>`__
     - `Vendetta <vendetta.html>`__
 
+- `Everway <everway.html>`__
 - `DCC and MCC <dcc_mcc_sc.html>`__
 - `2300 AD <2300.html>`__
 - `Wanderhome <wanderhome.html>`__

@@ -11,7 +11,7 @@ directives.register_directive("contentcard",ContentCard)
 
 from os import listdir, getcwd, chdir, makedirs, walk
 from os.path import isdir, isfile, join, expanduser, relpath
-from shutil import copyfile
+from shutil import copyfile, copytree
 
 contentDir = "_files"
 settingsFile = "redocs.json"
@@ -21,7 +21,7 @@ baseURL="https://github.com/kata-containers/documentation"
 gitHubMasterPath = "/tree/master"
 ignoreFiles = [headerFile,contentsFile]
 
-contentCSSList = ["css/plain.css","css/minimal.css","css/layout.css","css/custom.css"]
+contentCSSList = ["css/plain.css","css/minimal.css","css/layout.css","css/custom.css","css/fortune_cards.css"]
 
 contentExtraHead = '''
 <link rel="stylesheet" href="css/plain.css" type="text/css" />
@@ -185,10 +185,11 @@ class reDocs:
             makedirs(targetContentPath)
         cssDir = join(getcwd(),"css")
         htmlDir = join(getcwd(),"html")
-        for contentFile in listdir(contentDir):
-            contentFilePath = join(contentDir,contentFile)
-            if isfile(contentFilePath):
-                copyfile(contentFilePath,join(targetContentPath,contentFile))
+        copytree(contentDir,targetContentPath,dirs_exist_ok=True)
+        #for contentFile in listdir(contentDir):
+        #    contentFilePath = join(contentDir,contentFile)
+        #    if isfile(contentFilePath):
+        #        copyfile(contentFilePath,join(targetContentPath,contentFile))
         for cssFile in listdir(cssDir):
             cssFilePath = join(cssDir,cssFile)
             if isfile(cssFilePath):

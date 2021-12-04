@@ -3,6 +3,8 @@ Welcome
 
 .. contentcard:: cthulhu.rst
 
+.. contentcard:: everway.rst
+
 .. contentcard:: dcc_mcc_sc.rst
 
 .. contentcard:: 2300.rst

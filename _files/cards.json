@@ -1,0 +1,776 @@
+{
+  "main": [
+    {
+      "name": "Autumn",
+      "meanings": [
+        "Plenty",
+        "Want"
+      ],
+      "image": "Autumn.jpg",
+      "suit": "Seasons",
+      "number": "IX"
+    },
+    {
+      "name": "The Cockatrice",
+      "meanings": [
+        "Corruption",
+        "Recovery"
+      ],
+      "image": "cockatrice.jpg",
+      "suit": "Beasts",
+      "number": "XXI"
+    },
+    {
+      "name": "The Creator",
+      "meanings": [
+        "Nurture",
+        "Abandonment"
+      ],
+      "image": "Creator.jpg",
+      "suit": "Duality",
+      "number": "III"
+    },
+    {
+      "name": "Death",
+      "meanings": [
+        "Change",
+        "Stasis"
+      ],
+      "image": "death.jpg",
+      "suit": "Deities",
+      "number": "XXXIII"
+    },
+    {
+      "name": "The Defender",
+      "meanings": [
+        "Safety",
+        "Peril"
+      ],
+      "image": "Defender.jpg",
+      "suit": "Duality",
+      "number": "II"
+    },
+    {
+      "name": "The Soldier",
+      "meanings": [
+        "Duty",
+        "Blind Obedience"
+      ],
+      "image": "soldier.jpg",
+      "suit": "Estates",
+      "number": "XXVIII"
+    },
+    {
+      "name": "The Lion",
+      "meanings": [
+        "The Body Prevails",
+        "Weakness"
+      ],
+      "image": "Lion.jpg",
+      "suit": "Animals",
+      "number": "V"
+    },
+    {
+      "name": "Drowning in Armour",
+      "meanings": [
+        "Protective Measures turn Dangerous",
+        "True Prudence"
+      ],
+      "image": "Drowning.jpg",
+      "suit": "Follies",
+      "number": "XIV"
+    },
+    {
+      "name": "The Eagle",
+      "meanings": [
+        "The Mind Prevails",
+        "Thoughtlessness"
+      ],
+      "image": "Eagle.jpg",
+      "suit": "Animals",
+      "number": "IV"
+    },
+    {
+      "name": "Fearing Shadows",
+      "meanings": [
+        "Unnecessary Fear",
+        "Recognising Safety"
+      ],
+      "image": "Shadows.jpg",
+      "suit": "Follies",
+      "number": "XII"
+    },
+    {
+      "name": "Fertility",
+      "meanings": [
+        "Growth",
+        "Decline"
+      ],
+      "image": "Fertility.jpg",
+      "suit": "Deities",
+      "number": "XXXIV"
+    },
+    {
+      "name": "The Fish",
+      "meanings": [
+        "The Soul Prevails",
+        "Shallowness"
+      ],
+      "image": "Fish.jpg",
+      "suit": "Animals",
+      "number": "VI"
+    },
+    {
+      "name": "The Phoenix",
+      "meanings": [
+        "Rebirth",
+        "Destruction"
+      ],
+      "image": "Phoenix.jpg",
+      "suit": "Beasts",
+      "number": "XX"
+    },
+    {
+      "name": "Nature",
+      "meanings": [
+        "Life Energy",
+        "Energy Sapped"
+      ],
+      "image": "Nature.jpg",
+      "suit": "Deities",
+      "number": "XXXV"
+    },
+    {
+      "name": "Spring",
+      "meanings": [
+        "New Growth",
+        "Stagnation"
+      ],
+      "image": "spring.jpg",
+      "suit": "Seasons",
+      "number": "VII"
+    },
+    {
+      "name": "The Satyr",
+      "meanings": [
+        "Indulgence",
+        "Moderation"
+      ],
+      "image": "satyr.jpg",
+      "suit": "Beasts",
+      "number": "XIX"
+    },
+    {
+      "name": "The Priestess",
+      "meanings": [
+        "Understanding Mysteries",
+        "Impracticality"
+      ],
+      "image": "Priestess.jpg",
+      "suit": "Estates",
+      "number": "XXIII"
+    },
+    {
+      "name": "Summer",
+      "meanings": [
+        "Energy",
+        "Exhaustion"
+      ],
+      "image": "Summer.jpg",
+      "suit": "Seasons",
+      "number": "VIII"
+    },
+    {
+      "name": "Inspiration",
+      "meanings": [
+        "Creativity",
+        "Lack of Imagination"
+      ],
+      "image": "Inspiration.jpg",
+      "suit": "Deities",
+      "number": "XXXII"
+    },
+    {
+      "name": "The Fool",
+      "meanings": [
+        "Freedom",
+        "Lack of Connection"
+      ],
+      "image": "Fool.jpg",
+      "suit": "Estates",
+      "number": "XXII"
+    },
+    {
+      "name": "The Peasant",
+      "meanings": [
+        "Simple Strength",
+        "Lack of Vision"
+      ],
+      "image": "Peasant.jpg",
+      "suit": "Estates",
+      "number": "XXV"
+    },
+    {
+      "name": "Sowing Stones",
+      "meanings": [
+        "Fruitless Labor",
+        "Ceasing Fruitless Labor"
+      ],
+      "image": "SowingStones.jpg",
+      "suit": "Follies",
+      "number": "XIII"
+    },
+    {
+      "name": "The King",
+      "meanings": [
+        "Authority",
+        "Tyrrany"
+      ],
+      "image": "King.jpg",
+      "suit": "Estates",
+      "number": "XXVII"
+    },
+    {
+      "name": "Trickery",
+      "meanings": [
+        "Deceit",
+        "Subterfuge Revealed"
+      ],
+      "image": "Trickery.jpg",
+      "suit": "Deities",
+      "number": "XXX"
+    },
+    {
+      "name": "The Hermit",
+      "meanings": [
+        "Wisdom",
+        "Isolation"
+      ],
+      "image": "Hermit.jpg",
+      "suit": "Estates",
+      "number": "XXIV"
+    },
+    {
+      "name": "Striking the Dragon's Tail",
+      "meanings": [
+        "Underestimating the Challenge",
+        "Recognising the Larger Problem"
+      ],
+      "image": "Striking.jpg",
+      "suit": "Follies",
+      "number": "XV"
+    },
+    {
+      "name": "The Smith",
+      "meanings": [
+        "Productivity",
+        "Evil Effort"
+      ],
+      "image": "Smith.jpg",
+      "suit": "Estates",
+      "number": "XXVI"
+    },
+    {
+      "name": "The Unicorn",
+      "meanings": [
+        "Purity",
+        "Temptation"
+      ],
+      "image": "unicorn.jpg",
+      "suit": "Beasts",
+      "number": "XVIII"
+    },
+    {
+      "name": "Overlooking the Diamond",
+      "meanings": [
+        "Failing to See Opportunity",
+        "Recognising Opportunity"
+      ],
+      "image": "Diamond.jpg",
+      "suit": "Follies",
+      "number": "XI"
+    },
+    {
+      "name": "Winter",
+      "meanings": [
+        "Maturity",
+        "Inexperience"
+      ],
+      "image": "Winter.jpg",
+      "suit": "Seasons",
+      "number": "X"
+    },
+    {
+      "name": "War",
+      "meanings": [
+        "Great Effort",
+        "Wasted Effort"
+      ],
+      "image": "war.jpg",
+      "suit": "Deities",
+      "number": "XXXI"
+    },
+    {
+      "name": "Knowledge",
+      "meanings": [
+        "Truth",
+        "Falsehood"
+      ],
+      "image": "Knowledge.jpg",
+      "suit": "Deities",
+      "number": "XXIX"
+    },
+    {
+      "name": "The Griffin",
+      "meanings": [
+        "Valor",
+        "Cowardice"
+      ],
+      "image": "Griffin.jpg",
+      "suit": "Beasts",
+      "number": "XVI"
+    },
+    {
+      "name": "The Dragon",
+      "meanings": [
+        "Cunning",
+        "Blind Fury"
+      ],
+      "image": "dragon.jpg",
+      "suit": "Beasts",
+      "number": "XVII"
+    },
+    {
+      "name": "Law",
+      "meanings": [
+        "Order",
+        "Treachery"
+      ],
+      "image": "Law.jpg",
+      "suit": "Deities",
+      "number": "XXXVI"
+    },
+    {
+      "name": "The Usurper",
+      "meanings": [
+        "",
+        ""
+      ],
+      "image": "Usurper.jpg",
+      "suit": "Void",
+      "number": "I"
+    }
+  ],
+  "seasons": [
+    {
+      "name": "The Commander",
+      "meanings": [
+        "Foresight",
+        "Pettiness"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "10"
+    },
+    {
+      "name": "The Mirror",
+      "meanings": [
+        "Vanity",
+        "Recognition"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "9"
+    },
+    {
+      "name": "Imprisonment",
+      "meanings": [
+        "Frustration",
+        "New Approach"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "8"
+    },
+    {
+      "name": "The Battlefield",
+      "meanings": [
+        "Acrimony",
+        "Debts Paid"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "7"
+    },
+    {
+      "name": "The Elephant",
+      "meanings": [
+        "Domination",
+        "Collateral Damage"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "6"
+    },
+    {
+      "name": "The Gauntlet",
+      "meanings": [
+        "Persistence",
+        "Distraction"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "5"
+    },
+    {
+      "name": "The Arena",
+      "meanings": [
+        "Discipline",
+        "Cruelty"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "4"
+    },
+    {
+      "name": "The Automaton",
+      "meanings": [
+        "Efficiency",
+        "Inflexibility"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "3"
+    },
+    {
+      "name": "The Dance",
+      "meanings": [
+        "Cooperation",
+        "Competition"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "2"
+    },
+    {
+      "name": "The Sword",
+      "meanings": [
+        "Forceful Poer",
+        "Carelessness"
+      ],
+      "image": "none.png",
+      "suit": "Summer",
+      "number": "1"
+    },
+    {
+      "name": "The Priest",
+      "meanings": [
+        "Mercy",
+        "Fervor"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "10"
+    },
+    {
+      "name": "The Voyage",
+      "meanings": [
+        "Discovery",
+        "Absence"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "9"
+    },
+    {
+      "name": "Grief",
+      "meanings": [
+        "Pain",
+        "Comfort"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "8"
+    },
+    {
+      "name": "The Precipice",
+      "meanings": [
+        "Leap of Faith",
+        "Turning Point"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "7"
+    },
+    {
+      "name": "The Scout",
+      "meanings": [
+        "Preparation",
+        "Improvisation"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "6"
+    },
+    {
+      "name": "The Woods",
+      "meanings": [
+        "Reconnection",
+        "Feeling Lost"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "5"
+    },
+    {
+      "name": "The Temple",
+      "meanings": [
+        "Faithfulness",
+        "Hypocrisy"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "4"
+    },
+    {
+      "name": "The Hanged Man",
+      "meanings": [
+        "Surrender",
+        "Avoidance"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "3"
+    },
+    {
+      "name": "The Mystery",
+      "meanings": [
+        "Revelation",
+        "Delusion"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "2"
+    },
+    {
+      "name": "The Ritual",
+      "meanings": [
+        "Communion",
+        "Rote"
+      ],
+      "image": "none.png",
+      "suit": "Winter",
+      "number": "1"
+    },
+    {
+      "name": "The Healer",
+      "meanings": [
+        "Mending",
+        "Neglect"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "10"
+    },
+    {
+      "name": "The Stockpile",
+      "meanings": [
+        "Caution",
+        "Untapped Resources"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "9"
+    },
+    {
+      "name": "Hunger",
+      "meanings": [
+        "Desire",
+        "Satisfaction"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "8"
+    },
+    {
+      "name": "The Gambling Table",
+      "meanings": [
+        "Calculated Risk",
+        "Addiction"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "7"
+    },
+    {
+      "name": "The Beggar",
+      "meanings": [
+        "Seeking Help",
+        "Taking Advantage"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "6"
+    },
+    {
+      "name": "The Labyrinth",
+      "meanings": [
+        "Confusion",
+        "Finding the Path"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "5"
+    },
+    {
+      "name": "The Tomb",
+      "meanings": [
+        "Renown",
+        "Obscurity"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "4"
+    },
+    {
+      "name": "The Thief",
+      "meanings": [
+        "Undeserved Gain",
+        "Generosity"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "3"
+    },
+    {
+      "name": "The Dream",
+      "meanings": [
+        "Hope",
+        "Pragmatism"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "2"
+    },
+    {
+      "name": "The Harvest",
+      "meanings": [
+        "Effort Rewarded",
+        "Hardship"
+      ],
+      "image": "none.png",
+      "suit": "Autumn",
+      "number": "1"
+    },
+    {
+      "name": "The Mage",
+      "meanings": [
+        "Resourcefulness",
+        "Manipulation"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "10"
+    },
+    {
+      "name": "The Child",
+      "meanings": [
+        "New Beginning",
+        "Blood Obligation"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "9"
+    },
+    {
+      "name": "Turbulence",
+      "meanings": [
+        "Disruption",
+        "Balance"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "8"
+    },
+    {
+      "name": "The Marketplace",
+      "meanings": [
+        "Negotiation",
+        "Regret"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "7"
+    },
+    {
+      "name": "The Adventurer",
+      "meanings": [
+        "New Experience",
+        "Boredom"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "6"
+    },
+    {
+      "name": "The Chase",
+      "meanings": [
+        "Pursuit",
+        "Flight"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "5"
+    },
+    {
+      "name": "The Wedding",
+      "meanings": [
+        "Harmony",
+        "Strife"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "4"
+    },
+    {
+      "name": "The Toymaker",
+      "meanings": [
+        "Finding Joy",
+        "Frivolity"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "3"
+    },
+    {
+      "name": "The Sowing",
+      "meanings": [
+        "Investment",
+        "Spoiled Plans"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "2"
+    },
+    {
+      "name": "The Library",
+      "meanings": [
+        "Learning",
+        "Arrogance"
+      ],
+      "image": "none.png",
+      "suit": "Spring",
+      "number": "1"
+    },
+    {
+      "name": "The Heavens",
+      "meanings": [
+        "Possibility",
+        "Paradox"
+      ],
+      "image": "none.png",
+      "suit": "Void",
+      "number": "Infinity"
+    }
+  ]
+}
