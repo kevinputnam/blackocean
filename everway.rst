@@ -2,7 +2,7 @@ Everway
 ##################
 
 .. image:: _files/everway.png
-   :alt: Everway cover image - a woman who might be a mystic looks into the distance while holding an exotic black cat.
+   :alt: Everway cover image - a woman with a gold nimbus glowing behind her, looks into the distance while holding an exotic black cat.
    :align: center
    :height: 300px
    :target: https://www.everway.com
