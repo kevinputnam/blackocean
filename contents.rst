@@ -14,6 +14,9 @@
     - `Vendetta <vendetta.html>`__
 
 - `Everway <everway.html>`__
+
+  - `Fortune Cards <everway.html#fortune-cards>`__
+
 - `DCC and MCC <dcc_mcc_sc.html>`__
 - `2300 AD <2300.html>`__
 - `Wanderhome <wanderhome.html>`__
