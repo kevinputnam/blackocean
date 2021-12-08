@@ -1,27 +1,30 @@
 
 #cards {
-    border:  1px solid #fcba03;
+    border:  1px solid #555555;
     width: 800px;
     height: 600px;
     max-width: 800px;
     max-height: 600px;
     padding: 10px;
     overflow: scroll;
-    background-color: #555555;
+    background-color: #E4E8EA;
+    border-radius: 30px;
 }
 
 .card {
     position: relative;
-    background-color: #000000;
-    color: #fcba03;
+    background-color: #ffffff;
+    color: #555555;
     font: 12px/14px sans-serif;
     width:200px; /* or whatever width you want. */
     max-width:200px; /* or whatever width you want. */
     height: 276px;
     max-height: 276px;
     padding: 10px;
-    border:  1px solid #fcba03;
+    border:  1px solid #555555;
     float: left;
+    border-radius: 15px;
+    margin: 10px;
 }
 
 
