@@ -34,7 +34,7 @@ contentFrameFiles = ["header.html","contents.html"]
 
 contentFrames = '''<div class="container">
 <div class="header" id="header">
-<iframe src="header.html" frameborder="0" width="100%" height="100px">
+<iframe src="header.html" scrolling="no" frameborder="0" width="100%" height="100px">
 </iframe>
 </div>
 <div class="row">
