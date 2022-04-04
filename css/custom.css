@@ -22,3 +22,15 @@
   margin-left:  85px;
   font-weight: bold;
 }
+
+div.sidebar {
+  background: lightgray;
+  border: medium;
+}
+
+div.admonition {
+  background: lightgray;
+  border: medium;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
