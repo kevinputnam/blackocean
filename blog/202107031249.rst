@@ -4,3 +4,28 @@ A Funny Thing Happened on the Way to the Forum
 .. image:: ../_files/forum.jpg
 
 This is just a test.
+
+This is a slide section
+==========================
+
+.. container:: slides
+
+   .. container:: slide
+
+      .. image:: /_files/naomi.png
+         :align: left
+         :height: 400px
+
+      .. heading:: Naomi Nagata Play Book
+
+      This should work.
+
+      This is Naomi. She's a badass.
+
+   .. container:: slide
+
+      This is slide 2
+
+   .. container:: slide
+
+      This is slide 3
