@@ -5,8 +5,10 @@ A Funny Thing Happened on the Way to the Forum
 
 This is just a test.
 
-This is a slide section
+Experimental
 ==========================
+
+I'm calling them slides. They're basically an infinite carousel, though they only go one way so far. It might be good for playbooks.
 
 .. container:: slides
 
@@ -18,14 +20,89 @@ This is a slide section
 
       .. heading:: Naomi Nagata Play Book
 
-      This should work.
-
       This is Naomi. She's a badass.
 
+      Reasons she's a badass:
+
+      * Engineer
+      * Brilliant
+      * She's the boss
+      * Cool
+      * Calm
+      * Collected
+
    .. container:: slide
 
-      This is slide 2
+      .. image:: /_files/caretaker.png
+         :align: left
+         :height: 400px
+
+      .. heading:: The Caretaker
+
+      Someone must pay attention to all the small and forgotten things in the world. Someone must listen to the voiceless.
+
+      You are alive. Your care is tender, supportive, and silent.
+
+      **Choose a name and some pronouns.**
+
+      **Choose an animal.**
+
+      * Stoat
+      * Salamander
+      * Lemur
+      * Crow
+      * A Reflective Animal
+      * A Quiet Animal
+
+      **Choose 2 you value and 2 that feel exchausting to be.**
+
+      * Alert
+      * Reflective
+      * Patient
+      * Friendly
+      * Expressive
+      * Organized
+      * Gentle
+      * Masculine
+      * Feminine
 
    .. container:: slide
 
-      This is slide 3
+      .. image:: /_files/septimus.jpg
+         :align: right
+         :height: 400px
+
+      .. heading:: The Scapegrace
+
+      You are the disgraced younger sibling of a noble house.
+
+      You are alive. Your care is gruff and backhanded.
+
+      **Choose a name and some pronouns.**
+
+      **Choose the number of older siblings you have.**
+
+      **Choose an animal.**
+
+      * Wolverine
+      * Komodo Dragon
+      * Swan
+      * Afghan Hound
+      * A tough animal
+      * A noble animal
+
+      **Choose 3-4 to describe your look.**
+
+      * Imbeccably dressed
+      * A long black coat
+      * A scar you try to hide
+      * A signet ring
+
+      **Choose 2 you believe about yourself and 2 others assume about you.**
+
+      * Wealthy
+      * Unscrupulous
+      * I am unredeemable
+      * Charming
+      * Ruthless
+      * Bad things that happen are your fault

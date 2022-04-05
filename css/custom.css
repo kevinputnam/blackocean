@@ -53,6 +53,14 @@ div.admonition {
 }
 
 
+.slide ul{
+  columns: 2;
+}
+
+.slide img {
+  padding: 8px;
+}
+
 .slide {
     display: inline-block;
     background-color: #ffffff;
@@ -67,4 +75,5 @@ div.admonition {
     border-radius: 15px;
     margin: 10px;
     overflow: hidden;
+    white-space: normal;
 }
