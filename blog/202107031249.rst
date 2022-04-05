@@ -14,7 +14,7 @@ I'm calling them slides. They're basically an infinite carousel, though they onl
 
    .. container:: slide
 
-      .. image:: /_files/naomi.png
+      .. image:: ../_files/naomi.png
          :align: left
          :height: 400px
 
@@ -33,7 +33,7 @@ I'm calling them slides. They're basically an infinite carousel, though they onl
 
    .. container:: slide
 
-      .. image:: /_files/caretaker.png
+      .. image:: ../_files/caretaker.png
          :align: left
          :height: 400px
 
@@ -68,7 +68,7 @@ I'm calling them slides. They're basically an infinite carousel, though they onl
 
    .. container:: slide
 
-      .. image:: /_files/septimus.jpg
+      .. image:: ../_files/septimus.jpg
          :align: right
          :height: 400px
 
