@@ -34,3 +34,46 @@ div.admonition {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+
+.slides {
+  border:  1px solid #555555;
+  width: 720px;
+  height: 480px;
+  max-width: 720px;
+  max-height: 480px;
+  overflow: scroll;
+  overflow-y:  hidden;
+  background-color: #E4E8EA;
+  display:  block !important;
+  white-space: nowrap;
+}
+
+.arbitrary {
+  clear: none;
+}
+
+
+.slide ul{
+  columns: 2;
+}
+
+.slide img {
+  padding: 8px;
+}
+
+.slide {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #555555;
+    font: 12px/14px sans-serif;
+    width:680px; /* or whatever width you want. */
+    max-width:680px; /* or whatever width you want. */
+    height: 440px;
+    max-height: 440px;
+    padding: 10px;
+    border:  1px solid #555555;
+    border-radius: 15px;
+    margin: 10px;
+    overflow: hidden;
+    white-space: normal;
+}

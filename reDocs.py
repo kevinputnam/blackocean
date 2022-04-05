@@ -6,8 +6,10 @@ from docutils.parsers.rst import directives
 
 from reDocdirectives import Details
 from reDocdirectives import ContentCard
+from reDocdirectives import Heading
 directives.register_directive("details", Details)
 directives.register_directive("contentcard",ContentCard)
+directives.register_directive("heading",Heading)
 
 from os import listdir, getcwd, chdir, makedirs, walk
 from os.path import isdir, isfile, join, expanduser, relpath
@@ -62,6 +64,14 @@ class ContentsFragmentTranslator(HTMLTranslator):
     def depart_summary(self, node):
         self.body.append('</summary>\n')
 
+    def visit_heading(self,node):
+        headingLevel = node['level']
+
+        self.body.append(self.starttag(node,'h'+headingLevel,''))
+
+    def depart_heading(self,node):
+        self.body.append('</h1>\n')
+
 
 class reDocs:
 
@@ -104,11 +114,11 @@ class reDocs:
             docExtraHead = indexExtraHead
             docFooter = '</div>\n</body>\n</html>'
         elif header:
-            self.html_fragment_writer.translator_class = HTMLTranslator
+            self.html_fragment_writer.translator_class = ContentsFragmentTranslator
             docExtraHead = indexExtraHead
             docFooter = '</div>\n</body>\n</html>'
         else:
-            self.html_fragment_writer.translator_class = HTMLTranslator
+            self.html_fragment_writer.translator_class = ContentsFragmentTranslator
             docExtraHead = ''
             for CSSFile in contentCSSList:
                 CSSFilePath = join(path2root,CSSFile)

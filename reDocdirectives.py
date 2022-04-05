@@ -2,7 +2,7 @@ from docutils import nodes, utils
 from docutils.parsers.rst import directives
 from docutils.parsers.rst import Directive
 from docutils.parsers import rst
-from docutils.nodes import paragraph, container, Inline
+from docutils.nodes import paragraph, container, Inline, Element
 from os.path import join, dirname
 
 class details(Inline,container):
@@ -12,6 +12,36 @@ class details(Inline,container):
 class summary(Inline,paragraph):
 
     pass
+
+class heading(Inline,paragraph):
+
+    pass
+
+class Heading(rst.Directive):
+
+    required_arguments = 1
+    optional_arguments = 0
+    has_content = False
+    final_argument_whitespace = True
+    option_spec = {'level' : int}
+
+    def run(self):
+        theNode = heading()
+        if 'level' not in self.options:
+            headingLevel = 1
+        else:
+            headingLevel = self.options['level']
+        if headingLevel in range(1,4):
+            headingLevel = str(headingLevel)
+        else:
+            headingLevel = "4"
+        theNode['level'] = headingLevel
+        theNode['classes'].append('arbitrary')
+        print(self.arguments)
+        newNode = nodes.Text(self.arguments[0])
+        theNode.append(newNode)
+        self.state.nested_parse(self.content,self.content_offset,theNode)
+        return[theNode]
 
 class Details(rst.Directive):
 
