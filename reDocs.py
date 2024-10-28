@@ -49,6 +49,9 @@ contentFrames = '''<div class="container">
 indexExtraHead = '''<base target="_parent">
 <link rel="stylesheet" href="css/contents.css" type="text/css" />
 '''
+headerExtraHead = '''<base target="_parent">
+<link rel="stylesheet" href="css/header.css" type="text/css" />
+'''
 
 class ContentsFragmentTranslator(HTMLTranslator):
 
@@ -115,7 +118,7 @@ class reDocs:
             docFooter = '</div>\n</body>\n</html>'
         elif header:
             self.html_fragment_writer.translator_class = ContentsFragmentTranslator
-            docExtraHead = indexExtraHead
+            docExtraHead = headerExtraHead
             docFooter = '</div>\n</body>\n</html>'
         else:
             self.html_fragment_writer.translator_class = ContentsFragmentTranslator

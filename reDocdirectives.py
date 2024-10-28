@@ -83,7 +83,7 @@ class ContentCard(rst.Directive):
     def run(self):
         path = directives.path(self.arguments[0])
         theNode = nodes.container()
-        theNode.set_class("contentcard")
+        theNode['classes'].append("contentcard")
         restText = ''
         with open(path, encoding="utf-8") as restFile:
             restText = restFile.read()
@@ -112,9 +112,9 @@ class ContentCard(rst.Directive):
             docSummary = nodes.paragraph()
             docText = nodes.Text("No summary.")
             docSummary.append(docText)
-        docSummary.set_class("summary")
+        docSummary['classes'].append("summary")
         cardTitle = nodes.paragraph()
-        cardTitle.set_class("title")
+        cardTitle['classes'].append("title")
         cardLink = nodes.reference()
         cardLink['refuri']=path.split('.')[0]+'.html'
         for item in docTitle:
@@ -124,7 +124,7 @@ class ContentCard(rst.Directive):
         docImage.delattr('width')
         docImage.delattr('height')
         docImage['align'] = 'left'
-        docImage.set_class('thumbnail')
+        docImage['classes'].append('thumbnail')
         imageRef = nodes.reference()
         imageRef['refuri'] = path.split('.')[0]+'.html'
         imageRef.append(docImage)
