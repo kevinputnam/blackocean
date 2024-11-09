@@ -1,0 +1,187 @@
+{
+  "name": "Star Frontiers SF:00",
+  "description": "Introductory Star Frontiers RPG",
+  "actions": [
+    {
+      "name": "Action_change_scene",
+      "actions": null,
+      "scene_id": 0,
+      "player_pos": [
+        0,
+        0
+      ]
+    }
+  ],
+  "author": "",
+  "things": {},
+  "player": {
+    "name": "Explorer",
+    "description": "Search and Rescue expert",
+    "things": [],
+    "actions": [],
+    "hidden": false,
+    "trigger": false,
+    "triggered": false,
+    "location": [
+      0,
+      0
+    ],
+    "dimensions": [
+      12,
+      12
+    ],
+    "dimOffset": [
+      2,
+      2
+    ],
+    "spritePath": "_files/assets/sprites/player_sprites.png",
+    "animated": true,
+    "spriteRows": 4,
+    "spritesPerRow": 4,
+    "animations": {
+      "up": [
+        [
+          1,
+          1
+        ]
+      ],
+      "down": [
+        [
+          1,
+          1
+        ]
+      ],
+      "left": [
+        [
+          1,
+          1
+        ]
+      ],
+      "right": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "spriteDim": [
+      16,
+      16
+    ]
+  },
+  "scenes": {
+    "0": {
+      "name": "Logo 1",
+      "description": "Star Frontiers Logo",
+      "things": [],
+      "actions": [
+        {
+          "name": "Action_start_timer",
+          "actions": null,
+          "milliseconds": "3000",
+          "variable": ""
+        },
+        {
+          "name": "Action_change_scene",
+          "actions": null,
+          "scene_id": "1",
+          "player_pos": [
+            0,
+            0
+          ]
+        }
+      ],
+      "id": 0,
+      "background": "_files/assets/backgrounds/star_frontiers_logo.png",
+      "draw_player": false,
+      "map_size": [],
+      "grid_size": null,
+      "collisions": {}
+    },
+    "1": {
+      "name": "Crash Landing",
+      "description": "A ship crashed into the side of a hill",
+      "things": [],
+      "actions": [
+        {
+          "name": "Action_start_timer",
+          "actions": null,
+          "milliseconds": "3000",
+          "variable": ""
+        },
+        {
+          "name": "Action_change_scene",
+          "actions": null,
+          "scene_id": "2",
+          "player_pos": [
+            80,
+            15
+          ]
+        }
+      ],
+      "id": 1,
+      "background": "_files/assets/backgrounds/crashed_starship.png",
+      "draw_player": false,
+      "map_size": [],
+      "grid_size": null,
+      "collisions": {}
+    },
+    "2": {
+      "name": "Game Map",
+      "description": "Map of planetary surface",
+      "things": [],
+      "actions": [
+        {
+          "name": "Action_message",
+          "actions": null,
+          "text_lines": [
+            "You gaze across the landscape",
+            "knowing that somewhere out",
+            "there is a wrecked starship. It",
+            "went down hours ago, with 15",
+            "people (including some kids).",
+            "Somehow you have to find them",
+            "as quickly as possible."
+          ]
+        }
+      ],
+      "id": 2,
+      "background": "_files/assets/backgrounds/planet_map.png",
+      "draw_player": true,
+      "map_size": [],
+      "grid_size": null,
+      "collisions": {
+        "6": [
+          3,
+          4
+        ],
+        "7": [
+          2,
+          5
+        ],
+        "8": [
+          0,
+          1,
+          6
+        ],
+        "9": [
+          6
+        ],
+        "10": [
+          6
+        ],
+        "11": [
+          6
+        ],
+        "12": []
+      }
+    }
+  },
+  "callbacks": {
+    "on_select_button": {
+      "name": "on_select_button",
+      "description": "Called when the game select button is pushed during normal play.",
+      "actions": []
+    }
+  }
+}

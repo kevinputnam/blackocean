@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href="js_basic_game/css/main.css">
+    <title>Adventure Game Editor</title>
+</head>
+<body>
+    <select id="gamefilepicker" ></select>
+    <button type="button" id="loadbutton" onclick="get_game_data()">Load</button>
+    <button type="button" id="savebutton" onclick="save_game()">Save</button>
+    <button type="button" id="newbutton" onclick="create_new_game()">New</button>
+    <div id="editor" class="editor">
+        <div id="gameview">
+            <h2><span id="gametitle">Game Data<span></h2>
+            <div id="gamedata">
+            </div>
+        </div>
+        <div id="editview"></div>
+        <div id="mapview"></div>
+        <div id="mapcoords">coords: <span id="cursorcoords">0,0</span></div>
+        <div id="actionview"></div>
+        <div id="editactionview"></div>
+    </div>
+    <script src="js_basic_game/js/utilities.js"></script>
+    <script src="js_basic_game/js/buildingblock.js"></script>
+    <script src="js_basic_game/js/gamecontainer.js"></script>
+    <script src="js_basic_game/js/callback.js"></script>
+    <script src="js_basic_game/js/things.js"></script>
+    <script src="js_basic_game/js/player.js"></script>
+    <script src="js_basic_game/js/actions.js"></script>
+    <script src="js_basic_game/js/scenes.js"></script>
+    <script src="js_basic_game/js/game.js"></script>
+    <script src="js_basic_game/js/editor.js"></script>
+    <script type="text/javascript">game_files = ['_files/sf_game_data.json'];populate_game_picker();</script>
+</body>
+</html>
