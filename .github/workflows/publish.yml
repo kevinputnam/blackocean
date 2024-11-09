@@ -23,6 +23,7 @@ jobs:
       run: |
         export PATH="$HOME/.local/bin:$PATH"
         python3 build.py
+        cd js_basic_game
         cp css/*.css ../_build/reDocs/css
         mkdir ../_build/reDocs/js
         cp js/*.js ../_build/reDocs/js
