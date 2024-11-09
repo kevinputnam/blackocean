@@ -23,6 +23,9 @@ jobs:
       run: |
         export PATH="$HOME/.local/bin:$PATH"
         python3 build.py
+        cp css/*.css ../_build/reDocs/css
+        mkdir ../_build/reDocs/js
+        cp js/*.js ../_build/reDocs/js
     - name: Push the docs
       uses: peaceiris/actions-gh-pages@v3
       with:
