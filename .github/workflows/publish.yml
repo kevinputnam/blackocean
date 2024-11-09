@@ -16,7 +16,8 @@ jobs:
     - name: Install dependencies
       run: |
         export PATH="$HOME/.local/bin:$PATH"
-        sudo apt-get install -y python3-setuptools
+        sudo apt-get install -y python3-setuptools git
+        git clone https://github.com/kevinputnam/js_basic_game.git
         pip3 install --user -r requirements.txt
     - name: Build the docs
       run: |
