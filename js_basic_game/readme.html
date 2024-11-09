@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.21.2: https://docutils.sourceforge.io/" />
+<title>Adventure Game Editor</title>
+<link rel="stylesheet" href="../css/plain.css" type="text/css" />
+<link rel="stylesheet" href="../css/minimal.css" type="text/css" />
+<link rel="stylesheet" href="../css/layout.css" type="text/css" />
+<link rel="stylesheet" href="../css/custom.css" type="text/css" />
+<link rel="stylesheet" href="../css/fortune_cards.css" type="text/css" />
+</head>
+<body>
+<div class="container">
+<div class="header" id="header">
+<iframe src="../header.html" scrolling="no" frameborder="0" width="100%" height="100px">
+</iframe>
+</div>
+<div class="row">
+<div class="toc" id="table-of-contents">
+<iframe src="../contents.html" frameborder="0" height="800px">
+</iframe>
+</div>
+
+
+<div class="document" id="adventure-game-editor">
+<h1 class="title">Adventure Game Editor</h1>
+<p>Conceived as a way to create simple games and learn JavaScript. I wanted to create new games reminiscent of my favorite game experiences. These were not characterized by extensive graphics or combat but by exploration, meaningful missions, making friends and other interesting encounters. While looking at various ways of making games, I really liked using GB-Studio, but I also chafed at the limitations. I wanted something equally simple without the limitations intrinsic to the GameBoy platform. If it was already out there, I didn't find it, so I made this. This version is more of a glorified proof of concept than a finished piece of software. My goal is to create a simple game, identify and fix problems with the editor, and propose new features for the next iteration.</p>
+<div class="section" id="design">
+<h1>Design</h1>
+<p>Everything is built on the <tt class="docutils literal">BuildingBlock</tt> class. Each Object type is responsible for providing a means for displaying itself in the treeview, and editing itself in the editor. Each Object must also provide a <tt class="docutils literal">run()</tt> method. Game scripting is provided by the <tt class="docutils literal">Action</tt> class.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
