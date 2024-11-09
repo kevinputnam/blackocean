@@ -1,5 +1,12 @@
-Star Frontiers Tiny RPG
-########################
+Star Frontiers
+##########################
+
+.. image:: _files/star_frontiers.jpg
+   :alt: Cover of the Star Frontiers TTRPG - a woman, a man, and a yazirian hold their ground in front of their crashed spaceship
+   :align: center
+   :height: 300px
+
+A tiny RPG I'm developing just for fun.
 
 .. raw:: html
 

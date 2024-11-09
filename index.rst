@@ -17,4 +17,6 @@ Welcome
 
 .. contentcard:: expanse.rst
 
+.. contentcard:: star_frontiers.rst
+
 .. contentcard:: blog/202107031249.rst
