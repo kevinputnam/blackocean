@@ -3,6 +3,12 @@
   "description": "Introductory Star Frontiers RPG",
   "actions": [
     {
+      "name": "Action_set_var",
+      "actions": null,
+      "variable": "game_time",
+      "value": "0"
+    },
+    {
       "name": "Action_change_scene",
       "actions": null,
       "scene_id": 0,
@@ -13,7 +19,159 @@
     }
   ],
   "author": "",
-  "things": {},
+  "things": {
+    "0": {
+      "name": "Clearing",
+      "description": "An opening in the thick trees",
+      "things": [],
+      "actions": [
+        {
+          "name": "Action_menu",
+          "actions": null,
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "prompt": [
+            "Travel to the clearing?"
+          ],
+          "variable": "yes",
+          "useValue": false
+        },
+        {
+          "name": "Action_if_eval",
+          "actions": [
+            {
+              "name": "Action_message",
+              "actions": null,
+              "text_lines": [
+                "After a grueling hour of",
+                "whacking through the",
+                "undergrowth, you finally",
+                "manage to break out of the",
+                "forest and into the clearing.",
+                "This is what you see..."
+              ]
+            },
+            {
+              "name": "Action_set_var",
+              "actions": null,
+              "variable": "game_time",
+              "value": "`$game_time` + 60"
+            },
+            {
+              "name": "Action_else",
+              "actions": [
+                {
+                  "name": "Action_message",
+                  "actions": null,
+                  "text_lines": [
+                    "OK"
+                  ]
+                }
+              ]
+            }
+          ],
+          "val1": "`$yes`",
+          "val2": "0",
+          "operator": "=="
+        }
+      ],
+      "id": 0,
+      "hidden": false,
+      "trigger": false,
+      "triggered": false,
+      "location": [
+        82,
+        34
+      ],
+      "dimensions": [
+        8,
+        8
+      ],
+      "dimOffset": [
+        0,
+        0
+      ],
+      "spritePath": "",
+      "animated": false
+    },
+    "1": {
+      "name": "The Ford",
+      "description": "One of the few places where it is possible to cross the river.",
+      "things": [],
+      "actions": [
+        {
+          "name": "Action_menu",
+          "actions": null,
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "prompt": [
+            "Do you want to cross the river?"
+          ],
+          "variable": "yes",
+          "useValue": false
+        },
+        {
+          "name": "Action_if_eval",
+          "actions": [
+            {
+              "name": "Action_message",
+              "actions": null,
+              "text_lines": [
+                "The river is shallow and",
+                "fast running to the South.",
+                "You are almost swept",
+                "away, but you manage to",
+                "cross. This is what you see ..."
+              ]
+            },
+            {
+              "name": "Action_set_var",
+              "actions": null,
+              "variable": "game_time",
+              "value": "`$game_time` + 30"
+            },
+            {
+              "name": "Action_else",
+              "actions": [
+                {
+                  "name": "Action_message",
+                  "actions": null,
+                  "text_lines": [
+                    "OK"
+                  ]
+                }
+              ]
+            }
+          ],
+          "val1": "`$yes`",
+          "val2": "0",
+          "operator": "=="
+        }
+      ],
+      "id": 1,
+      "hidden": false,
+      "trigger": false,
+      "triggered": false,
+      "location": [
+        60,
+        68
+      ],
+      "dimensions": [
+        8,
+        8
+      ],
+      "dimOffset": [
+        0,
+        0
+      ],
+      "spritePath": "",
+      "animated": false
+    }
+  },
   "player": {
     "name": "Explorer",
     "description": "Search and Rescue expert",
@@ -27,12 +185,12 @@
       0
     ],
     "dimensions": [
-      12,
-      12
+      8,
+      8
     ],
     "dimOffset": [
-      2,
-      2
+      4,
+      4
     ],
     "spritePath": "_files/assets/sprites/player_sprites.png",
     "animated": true,
@@ -129,7 +287,10 @@
     "2": {
       "name": "Game Map",
       "description": "Map of planetary surface",
-      "things": [],
+      "things": [
+        0,
+        1
+      ],
       "actions": [
         {
           "name": "Action_message",
@@ -151,27 +312,37 @@
       "map_size": [],
       "grid_size": null,
       "collisions": {
-        "6": [
+        "5": [
           3,
-          4
+          4,
+          2,
+          1,
+          0
+        ],
+        "6": [
+          2,
+          5,
+          6,
+          7
         ],
         "7": [
-          2,
-          5
+          1
         ],
         "8": [
-          0,
-          1,
-          6
+          0
         ],
         "9": [
-          6
+          8,
+          9
         ],
         "10": [
-          6
+          8,
+          10,
+          9
         ],
         "11": [
-          6
+          10,
+          11
         ],
         "12": []
       }
