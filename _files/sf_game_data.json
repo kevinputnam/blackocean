@@ -194,31 +194,75 @@
     ],
     "spritePath": "_files/assets/sprites/player_sprites.png",
     "animated": true,
-    "spriteRows": 4,
+    "spriteRows": 5,
     "spritesPerRow": 4,
     "animations": {
       "up": [
         [
-          1,
+          0,
+          0
+        ],
+        [
+          0,
           1
         ]
       ],
       "down": [
         [
-          1,
+          0,
+          0
+        ],
+        [
+          0,
           1
         ]
       ],
       "left": [
         [
-          1,
+          0,
+          0
+        ],
+        [
+          0,
           1
         ]
       ],
       "right": [
         [
-          1,
+          0,
+          0
+        ],
+        [
+          0,
           1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
         ]
       ]
     },
@@ -242,7 +286,7 @@
         {
           "name": "Action_change_scene",
           "actions": null,
-          "scene_id": "1",
+          "scene_id": "2",
           "player_pos": [
             0,
             0
@@ -262,19 +306,48 @@
       "things": [],
       "actions": [
         {
-          "name": "Action_start_timer",
+          "name": "Action_menu",
           "actions": null,
-          "milliseconds": "3000",
-          "variable": ""
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "prompt": [
+            "Do you try to go inside?"
+          ],
+          "variable": "enter_wreck",
+          "useValue": false
         },
         {
-          "name": "Action_change_scene",
-          "actions": null,
-          "scene_id": "2",
-          "player_pos": [
-            80,
-            15
-          ]
+          "name": "Action_if_eval",
+          "actions": [
+            {
+              "name": "Action_change_scene",
+              "actions": null,
+              "scene_id": "3",
+              "player_pos": [
+                0,
+                0
+              ]
+            },
+            {
+              "name": "Action_else",
+              "actions": [
+                {
+                  "name": "Action_change_scene",
+                  "actions": null,
+                  "scene_id": "2",
+                  "player_pos": [
+                    0,
+                    0
+                  ]
+                }
+              ]
+            }
+          ],
+          "val1": "`$enter_wreck`",
+          "val2": "0",
+          "operator": "=="
         }
       ],
       "id": 1,
@@ -287,10 +360,7 @@
     "2": {
       "name": "Game Map",
       "description": "Map of planetary surface",
-      "things": [
-        0,
-        1
-      ],
+      "things": [],
       "actions": [
         {
           "name": "Action_message",
@@ -304,48 +374,70 @@
             "Somehow you have to find them",
             "as quickly as possible."
           ]
+        },
+        {
+          "name": "Action_menu",
+          "actions": null,
+          "choices": [
+            "1. Ship wreck",
+            "2. Marsh",
+            "3. Smokey clearing"
+          ],
+          "prompt": [
+            "Where do you want to go?"
+          ],
+          "variable": "map_choice",
+          "useValue": false
+        },
+        {
+          "name": "Action_switch",
+          "actions": [
+            {
+              "name": "Action_case",
+              "actions": [
+                {
+                  "name": "Action_change_scene",
+                  "actions": null,
+                  "scene_id": "1",
+                  "player_pos": [
+                    0,
+                    0
+                  ]
+                }
+              ],
+              "value": "0"
+            }
+          ],
+          "variable": "map_choice"
         }
       ],
       "id": 2,
       "background": "_files/assets/backgrounds/planet_map.png",
-      "draw_player": true,
+      "draw_player": false,
       "map_size": [],
       "grid_size": null,
       "collisions": {
-        "5": [
-          3,
-          4,
-          2,
-          1,
-          0
-        ],
-        "6": [
-          2,
-          5,
-          6,
-          7
-        ],
-        "7": [
-          1
-        ],
-        "8": [
-          0
-        ],
-        "9": [
-          8,
-          9
-        ],
-        "10": [
-          8,
-          10,
-          9
-        ],
-        "11": [
-          10,
-          11
-        ],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": [],
+        "10": [],
+        "11": [],
         "12": []
       }
+    },
+    "3": {
+      "name": "Ship Interior",
+      "description": "",
+      "things": [],
+      "actions": [],
+      "id": 3,
+      "background": "_files/assets/backgrounds/main_deck.png",
+      "draw_player": true,
+      "map_size": [],
+      "grid_size": null,
+      "collisions": {}
     }
   },
   "callbacks": {
